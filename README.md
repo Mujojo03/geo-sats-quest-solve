@@ -1,73 +1,129 @@
-# Welcome to your Lovable project
 
-## Project info
+# GEOSATS - GPS Bounty Hunter
 
-**URL**: https://lovable.dev/projects/fdc4a3c7-6fa4-4280-b76d-43ffb502edd3
+A decentralized application that combines GPS location services, Lightning Network payments, Nostr protocol, and AI to create an exciting real-world bounty hunting experience.
 
-## How can I edit this code?
+## 🎯 What is GEOSATS?
 
-There are several ways of editing your application.
+GEOSATS allows users to create location-based bounties with Bitcoin rewards. Other users can hunt these bounties by physically going to the specified GPS coordinates, solving optional AI-generated puzzles, and claiming their rewards through the Lightning Network.
 
-**Use Lovable**
+## 🚀 Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/fdc4a3c7-6fa4-4280-b76d-43ffb502edd3) and start prompting.
+- **GPS-Based Bounties**: Create and discover location-specific challenges
+- **Lightning Network Integration**: Instant Bitcoin payments for successful claims
+- **Nostr Protocol**: Decentralized data storage and communication
+- **AI-Generated Puzzles**: Optional riddles and challenges for bounty locations
+- **Interactive Map**: Visual bounty discovery and navigation
+- **Real-time Feed**: Live updates of bounty activities
+- **Mobile-Optimized**: Perfect for on-the-go treasure hunting
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🛠 Technology Stack
 
-**Use your preferred IDE**
+- **Frontend**: React 18 + TypeScript + Vite
+- **Styling**: Tailwind CSS + shadcn/ui components
+- **State Management**: React Hooks + Custom Context
+- **Lightning**: WebLN integration (Alby, LNbits compatible)
+- **Location**: HTML5 Geolocation API
+- **UI Components**: Lucide React icons + Custom components
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🏗 Project Structure
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+src/
+├── components/          # Reusable UI components
+│   ├── BountyMap.tsx   # Interactive map component
+│   ├── BountyFeed.tsx  # Bounty listing and feed
+│   ├── CreateBountyForm.tsx
+│   └── ClaimBountyModal.tsx
+├── hooks/              # Custom React hooks
+│   ├── useNostr.ts     # Nostr protocol integration
+│   ├── useLightning.ts # Lightning Network integration
+│   └── useLocation.ts  # GPS and location services
+├── pages/              # Main application pages
+│   └── Index.tsx       # Main app interface
+└── lib/                # Utility functions
+    └── utils.ts
 ```
 
-**Edit a file directly in GitHub**
+## 🎮 How to Use
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### For Bounty Creators:
+1. Click "Create Bounty" to set up a new challenge
+2. Set GPS coordinates (or use current location)
+3. Add description and reward amount in sats
+4. Optionally generate an AI puzzle
+5. Fund the bounty through Lightning Network
 
-**Use GitHub Codespaces**
+### For Bounty Hunters:
+1. Browse bounties on the map or feed
+2. Navigate to the GPS location
+3. Solve any required puzzles
+4. Claim your reward when within range
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🔧 Development Setup
 
-## What technologies are used for this project?
+```bash
+# Install dependencies
+npm install
 
-This project is built with:
+# Start development server
+npm run dev
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+# Build for production
+npm run build
+```
 
-## How can I deploy this project?
+## 🌐 Integration Features
 
-Simply open [Lovable](https://lovable.dev/projects/fdc4a3c7-6fa4-4280-b76d-43ffb502edd3) and click on Share -> Publish.
+### Lightning Network
+- WebLN browser extension support
+- Automatic payment processing
+- Escrow functionality for bounty funds
+- Real-time balance tracking
 
-## Can I connect a custom domain to my Lovable project?
+### Nostr Protocol
+- Decentralized bounty storage
+- Event-based claim verification
+- Cross-relay synchronization
+- Identity management
 
-Yes, you can!
+### GPS & Location
+- High-accuracy positioning
+- Proximity verification
+- Real-time location tracking
+- Distance calculations
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🚀 Future Enhancements
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- **Team Bounties**: Collaborative treasure hunting
+- **Reputation System**: Hunter and creator ratings
+- **Advanced Puzzles**: Photo verification, QR codes
+- **Social Features**: Comments, sharing, following
+- **Gamification**: Achievements, leaderboards, streaks
+
+## 📱 Mobile Experience
+
+GEOSATS is optimized for mobile devices with:
+- Touch-friendly interface
+- Offline map caching
+- Background location tracking
+- Push notifications for nearby bounties
+
+## 🔐 Security & Privacy
+
+- Non-custodial Lightning payments
+- Encrypted location data
+- Pseudonymous Nostr identities
+- Optional privacy modes
+
+## 📄 License
+
+Open source project - see LICENSE file for details.
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our contributing guidelines for more information.
+
+---
+
+**Ready to start your bounty hunting adventure? Install a Lightning wallet and let's explore the world together! ⚡🌍**
